@@ -6,48 +6,80 @@ const data = [
 	{
 		link:
 			"https://developer.mozilla.org/de/docs/Learn/Getting_started_with_the_web",
-		name: "mozilla.org/intro ",
+		description: "mozilla.org/intro ",
 	},
 	{
 		link:
 			"https://developer.mozilla.org/de/docs/Learn/Getting_started_with_the_web",
-		name: "1111111111111 ",
+		description: "1111111111111 ",
 	},
 	{
 		link:
 			"https://developer.mozilla.org/de/docs/Learn/Getting_started_with_the_web",
-		name: "2222222222222 ",
+		description: "2222222222222 ",
 	},
 	{
 		link:
 			"https://developer.mozilla.org/de/docs/Learn/Getting_started_with_the_web",
-		name: "3333333333333 ",
+		description: "3333333333333 ",
 	},
 	{
 		link:
 			"https://developer.mozilla.org/de/docs/Learn/Getting_started_with_the_web",
-		name: "4444444444444 ",
+		description: "4444444444444 ",
 	},
 ];
 
 class App extends Component {
 	state = {
-		title: "",
+		description: "",
+		link: "",
 	};
-	changeTitle = (event) => {
-		console.log(event.target);
-		this.setState({ title: event.target.value });
+	handleChange = (event) => {
+		console.log(event.target.name);
+		this.setState({
+			[event.target.name]: event.target.value,
+		});
 	};
+
 	render() {
 		return (
-			<div>
-				<h1>{this.state.title}</h1>
-				{data.map((element) => {
+			<div className="mainBody">
+				<a className="links" href={this.state.link} target="_blank">
+					{this.state.description}
+				</a>
+
+				{/* {data.map((element) => {
 					return <Child link={element.link} name={element.name} />;
-				})}
+				})} */}
 				<form className="submitForm">
-					<input type="text" />
-					<input type="submit" onSubmit={this.changeTitle} />
+					<label className="submitLabel" for="description">
+						Description:
+					</label>
+					<input
+						className="submitInput"
+						value={this.state.description}
+						name="description"
+						type="text"
+						required
+						onChange={this.handleChange}
+					/>
+					<label className="submitLabel" for="link">
+						Link:
+					</label>
+					<input
+						className="submitInput"
+						value={this.state.link}
+						name="link"
+						type="text"
+						required
+						onChange={this.handleChange}
+					/>
+					<input
+						className="submitButton"
+						type="submit"
+						onSubmit={this.changeTitle}
+					/>
 				</form>
 			</div>
 		);

@@ -1,3 +1,10 @@
+.mainBody {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+}
+
 .links {
 	display: flex;
 	margin: 10px;
@@ -6,17 +13,36 @@
 }
 
 .links:hover {
-	color: blue;
+	color: green;
 	text-decoration: underline;
 }
 
 .submitForm {
 	display: flex;
 	flex-direction: column;
-	max-width: 300px;
+	width: 500px;
+	border: solid 1px green;
 }
 
 .submitForm > * {
-	margin: 10px;
+	max-width: 100%;
+}
+
+.submitLabel {
+	margin: 10px 10px 2px 10px;
+}
+
+.submitInput {
+	padding: 10px;
+	margin: 3px 10px 10px 10px;
+	border: solid 1px green;
 	outline-color: green;
+}
+
+.submitButton {
+	padding: 10px;
+	margin: 10px;
+	color: white;
+	border: none;
+	background-color: green;
 }
