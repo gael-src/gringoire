@@ -9,3 +9,14 @@
 	color: blue;
 	text-decoration: underline;
 }
+
+.submitForm {
+	display: flex;
+	flex-direction: column;
+	max-width: 300px;
+}
+
+.submitForm > * {
+	margin: 10px;
+	outline-color: green;
+}

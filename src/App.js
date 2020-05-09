@@ -1,4 +1,4 @@
-import React from "react";
+import React, { Component } from "react";
 import Child from "./Child";
 import "./App.css";
 
@@ -6,7 +6,7 @@ const data = [
 	{
 		link:
 			"https://developer.mozilla.org/de/docs/Learn/Getting_started_with_the_web",
-		name: "mozilla.org/Getting_started_with_the_web ",
+		name: "mozilla.org/intro ",
 	},
 	{
 		link:
@@ -30,17 +30,27 @@ const data = [
 	},
 ];
 
-function App() {
-	return (
-		<div>
-			<h1>Hello Human</h1>
-			<Child link={data[0].link} name={data[0].name} />
-			<Child link={data[1].link} name={data[1].name} />
-			<Child link={data[2].link} name={data[2].name} />
-			<Child link={data[3].link} name={data[3].name} />
-			<Child link={data[4].link} name={data[4].name} />
-		</div>
-	);
+class App extends Component {
+	state = {
+		title: "",
+	};
+	changeTitle = (event) => {
+		console.log(event.target);
+		this.setState({ title: event.target.value });
+	};
+	render() {
+		return (
+			<div>
+				<h1>{this.state.title}</h1>
+				{data.map((element) => {
+					return <Child link={element.link} name={element.name} />;
+				})}
+				<form className="submitForm">
+					<input type="text" />
+					<input type="submit" onSubmit={this.changeTitle} />
+				</form>
+			</div>
+		);
+	}
 }
-
 export default App;
