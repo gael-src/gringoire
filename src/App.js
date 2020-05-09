@@ -6,27 +6,27 @@ const data = [
 	{
 		link:
 			"https://developer.mozilla.org/de/docs/Learn/Getting_started_with_the_web",
-		name: "mozilla.org/Getting_started_with_the_web",
+		name: "mozilla.org/Getting_started_with_the_web ",
 	},
 	{
 		link:
 			"https://developer.mozilla.org/de/docs/Learn/Getting_started_with_the_web",
-		name: "mozilla.org/ref",
+		name: "1111111111111 ",
 	},
 	{
 		link:
 			"https://developer.mozilla.org/de/docs/Learn/Getting_started_with_the_web",
-		name: "mozilla.org/Getting_started_with_the_web",
+		name: "2222222222222 ",
 	},
 	{
 		link:
 			"https://developer.mozilla.org/de/docs/Learn/Getting_started_with_the_web",
-		name: "mozilla.oed_with_the_web",
+		name: "3333333333333 ",
 	},
 	{
 		link:
 			"https://developer.mozilla.org/de/docs/Learn/Getting_started_with_the_web",
-		name: "mozilla.org/Getting_st_web",
+		name: "4444444444444 ",
 	},
 ];
 
