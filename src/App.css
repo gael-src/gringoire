@@ -17,29 +17,36 @@
 	text-decoration: underline;
 }
 
-.submitForm {
+.formContainer {
 	display: flex;
 	flex-direction: column;
 	width: 500px;
 	border: solid 1px green;
 }
 
-.submitForm > * {
+.formForm > * {
 	max-width: 100%;
 }
 
-.submitLabel {
+.formLegend {
+	margin: 20px;
+	align-self: center;
+	font-weight: bold;
+	font-size: 18px;
+}
+
+.formLabel {
 	margin: 10px 10px 2px 10px;
 }
 
-.submitInput {
+.formInput {
 	padding: 10px;
 	margin: 3px 10px 10px 10px;
 	border: solid 1px green;
 	outline-color: green;
 }
 
-.submitButton {
+.formButton {
 	padding: 10px;
 	margin: 10px;
 	color: white;

@@ -52,23 +52,24 @@ class App extends Component {
 				{/* {data.map((element) => {
 					return <Child link={element.link} name={element.name} />;
 				})} */}
-				<form className="submitForm">
-					<label className="submitLabel" for="description">
+				<form className="formContainer">
+					<legend className="formLegend">Add Link</legend>
+					<label className="formLabel" for="description">
 						Description:
 					</label>
 					<input
-						className="submitInput"
+						className="formInput"
 						value={this.state.description}
 						name="description"
 						type="text"
 						required
 						onChange={this.handleChange}
 					/>
-					<label className="submitLabel" for="link">
+					<label className="formLabel" for="link">
 						Link:
 					</label>
 					<input
-						className="submitInput"
+						className="formInput"
 						value={this.state.link}
 						name="link"
 						type="text"
@@ -76,7 +77,7 @@ class App extends Component {
 						onChange={this.handleChange}
 					/>
 					<input
-						className="submitButton"
+						className="formButton"
 						type="submit"
 						onSubmit={this.changeTitle}
 					/>
