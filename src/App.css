@@ -52,4 +52,9 @@
 	color: white;
 	border: none;
 	background-color: green;
+	border: solid 1px green;
+}
+
+.formButton:hover {
+	background-color: rgba(0, 128, 0, 0.8);
 }

@@ -4,7 +4,7 @@ import "./App.css";
 const Child = (props) => {
 	return (
 		<a className="links" href={props.link} target="_blank">
-			{props.name}
+			{props.description}
 		</a>
 	);
 };
