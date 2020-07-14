@@ -17,6 +17,13 @@
 	text-decoration: underline;
 }
 
+.li-links {
+	list-style: none;
+	padding: 0;
+	margin: 2px;
+	border: solid 2px green;
+}
+
 .formContainer {
 	display: flex;
 	flex-direction: column;
