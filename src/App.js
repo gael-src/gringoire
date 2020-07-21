@@ -1,4 +1,4 @@
-import React, { Component } from "react";
+ import React, { Component } from "react";
 import Child from "./Child";
 import "./App.css";
 
