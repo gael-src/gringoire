@@ -4,27 +4,32 @@ import "./App.css";
 
 const data = [
   {
-    title: "mozilla.org/intro ",
+    id: "111sdfg",
+    title: "mozilla.org/intro 111 ",
     link:
       "https://developer.mozilla.org/de/docs/Learn/Getting_started_with_the_web",
   },
   {
-    title: "1111111111111 ",
+    id: "222sdfg",
+    title: "mozilla.org/intro 222 ",
     link:
       "https://developer.mozilla.org/de/docs/Learn/Getting_started_with_the_web",
   },
   {
-    title: "2222222222222 ",
+    id: "333sdfg",
+    title: "mozilla.org/intro 333 ",
     link:
       "https://developer.mozilla.org/de/docs/Learn/Getting_started_with_the_web",
   },
   {
-    title: "3333333333333 ",
+    id: "444sdfg",
+    title: "mozilla.org/intro 444 ",
     link:
       "https://developer.mozilla.org/de/docs/Learn/Getting_started_with_the_web",
   },
   {
-    title: "4444444444444 ",
+    id: "555sdfg",
+    title: "mozilla.org/intro 555 ",
     link:
       "https://developer.mozilla.org/de/docs/Learn/Getting_started_with_the_web",
   },
@@ -32,6 +37,7 @@ const data = [
 
 class App extends Component {
   state = {
+    id: "",
     title: "",
     link: "",
   };
@@ -45,12 +51,16 @@ class App extends Component {
   render() {
     return (
       <div className="mainBody">
-        <a className="links" href={this.state.link} target="_blank">
+        <a
+          className="links"
+          href={this.state.link}
+          target="_blank"
+          rel="noopener noreferrer"
+        >
           {this.state.title}
         </a>
-
         {data.map((element) => {
-          return <Child link={element.link} name={element.title} />;
+          return <Child link={element.link} title={element.title} />;
         })}
         <form className="formContainer">
           <legend className="formLegend">Add Link</legend>
